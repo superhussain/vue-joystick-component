@@ -1,0 +1,57 @@
+{
+  "name": "vue-joystick-component",
+  "version": "0.0.1",
+  "description": "A Vue 3 Joystick Component",
+  "repository": "superhussain/vue-joystick-component",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "packageManager": "pnpm@7.26.3",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest dev",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
+    "prepack": "pnpm run build",
+    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && vitest run --coverage",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
+  },
+  "devDependencies": {
+    "@histoire/plugin-vue": "^0.12.4",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitest/coverage-c8": "^0.28.4",
+    "changelogen": "^0.4.1",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "histoire": "^0.12.4",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.1",
+    "vite": "^3.2.5",
+    "vitest": "^0.28.4",
+    "vue": "^3.2.47",
+    "vue-eslint-parser": "^9.1.0"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "strict": true,
+    "declaration": true,
+    "strictNullChecks": true,
+    "jsx": "preserve"
+  },
+  "include": ["env.d.ts", "src", "test"]
+}

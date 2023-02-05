@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.1.3
+
+
+### 📖 Documentation
+
+  - Add troubleshooting guide for nuxt (ff288de)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.1.2
 
 

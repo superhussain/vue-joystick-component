@@ -182,7 +182,8 @@ const stickStyle = computed(() => {
  * @param coordinates
  */
 const _updatePos = (coordinates: JoystickComponent.Coordinates) => {
-  if (_isClient) window.requestAnimationFrame(() => (state.coordinates = coordinates))
+  if (!_isClient) return
+  window.requestAnimationFrame(() => (state.coordinates = coordinates))
   if (typeof props.minDistance === 'number' && coordinates.distance < props.minDistance) return
   _throttleMoveCallback({
     type: 'move',
@@ -198,26 +199,20 @@ const _updatePos = (coordinates: JoystickComponent.Coordinates) => {
  * @param e PointerEvent
  */
 const _pointerDown = (e: PointerEvent) => {
-  if (props.disabled || props.followCursor || !baseRef.value || !stickRef.value) return
+  if (!_isClient || props.disabled || props.followCursor || !baseRef.value || !stickRef.value) {
+    return
+  }
+
   _parentRect.value = baseRef.value.getBoundingClientRect()
   state.dragging = true
 
-  if (_isClient) {
-    window.addEventListener(JoystickComponent.InteractionEvents.PointerUp, (event) =>
-      _pointerUp(event),
-    )
-  }
-
-  if (_isClient) {
-    window.addEventListener(JoystickComponent.InteractionEvents.PointerMove, (event) =>
-      _pointerMove(event),
-    )
-  }
+  const pointerUp = JoystickComponent.InteractionEvents.PointerUp
+  const pointerMove = JoystickComponent.InteractionEvents.PointerMove
+  window.addEventListener(pointerUp, (event) => _pointerUp(event))
+  window.addEventListener(pointerMove, (event) => _pointerMove(event))
 
   _pointerId.value = e.pointerId
-  if (typeof stickRef.value.setPointerCapture === 'function') {
-    stickRef.value.setPointerCapture(e.pointerId)
-  }
+  stickRef.value.setPointerCapture(e.pointerId)
   emit('start', { type: 'start' })
 }
 
@@ -304,6 +299,7 @@ const _pointerMove = (event: PointerEvent) => {
  * Handle pointer up and de-register listen events
  */
 const _pointerUp = (event: PointerEvent) => {
+  if (!_isClient) return
   if (
     event.pointerId !== _pointerId.value &&
     event.type !== JoystickComponent.InteractionEvents.FollowStop
@@ -311,20 +307,13 @@ const _pointerUp = (event: PointerEvent) => {
     return
   }
 
-  if (_isClient) {
-    window.requestAnimationFrame(() => {
-      state.dragging = false
-      if (!props.sticky) state.coordinates = undefined
-    })
-  }
+  window.requestAnimationFrame(() => {
+    state.dragging = false
+    if (!props.sticky) state.coordinates = undefined
+  })
 
-  if (_isClient) {
-    window.removeEventListener(JoystickComponent.InteractionEvents.PointerUp, _pointerUp)
-  }
-
-  if (_isClient) {
-    window.removeEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
-  }
+  window.removeEventListener(JoystickComponent.InteractionEvents.PointerUp, _pointerUp)
+  window.removeEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
 
   _pointerId.value = undefined
 
@@ -345,18 +334,16 @@ const _pointerUp = (event: PointerEvent) => {
  * Start following
  */
 const _followStart = () => {
+  if (!_isClient) return
   if (baseRef.value) _parentRect.value = baseRef.value.getBoundingClientRect()
   state.dragging = true
-  if (_isClient) {
-    window.addEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
-  }
+  window.addEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
   emit('start', { type: 'start' })
 }
 
 const _followStop = () => {
-  if (_isClient) {
-    window.removeEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
-  }
+  if (!_isClient) return
+  window.removeEventListener(JoystickComponent.InteractionEvents.PointerMove, _pointerMove)
   _pointerUp(new PointerEvent(JoystickComponent.InteractionEvents.FollowStop))
 }
 

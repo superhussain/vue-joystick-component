@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.9
+
+
+### 🤖 CI
+
+  - Add nojekyll file (f6bbabd)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.0.8
 
 

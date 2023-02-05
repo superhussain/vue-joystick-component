@@ -9,3 +9,4 @@ types
 .nyc_output
 .eslintcache
 coverage
+.histoire

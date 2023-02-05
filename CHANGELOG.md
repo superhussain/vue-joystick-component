@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.7
+
+
+### 🤖 CI
+
+  - Fix histoire path for gh pages again (cf828b9)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.0.6
 
 

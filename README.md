@@ -88,3 +88,21 @@ interface JoystickComponentProps {
   minDistance?: number
 }
 ```
+
+## Troubleshooting
+
+### `Unknown file extension ".vue" for ...`
+
+```
+TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".vue" for /path/to/vue-joystick-component/dist/Joystick.vue
+```
+
+If you're using Nuxt, you can tell Nuxt to transpile the package by adding the `build.transpile` option in your `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  build: {
+    transpile: ['vue-joystick-component'],
+  },
+})
+```

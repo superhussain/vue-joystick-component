@@ -212,7 +212,9 @@ const _pointerDown = (e: PointerEvent) => {
   window.addEventListener(pointerMove, (event) => _pointerMove(event))
 
   _pointerId.value = e.pointerId
-  stickRef.value.setPointerCapture(e.pointerId)
+  if (typeof stickRef.value.setPointerCapture === 'function') {
+    stickRef.value.setPointerCapture(e.pointerId)
+  }
   emit('start', { type: 'start' })
 }
 

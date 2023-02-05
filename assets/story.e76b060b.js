@@ -1,5 +1,5 @@
-import { N as createRouter, _ as __vitePreload, O as createWebHistory, P as createWebHashHistory, i as defineStore, r as ref, c as computed } from "./vendor.95d36a40.js";
-import { h as histoireConfig } from "./GenericMountStory.vue2.f47deb74.js";
+import { N as createRouter, _ as __vitePreload, O as createWebHistory, P as createWebHashHistory, i as defineStore, r as ref, c as computed } from "./vendor.9201be76.js";
+import { h as histoireConfig } from "./GenericMountStory.vue2.f60a7434.js";
 const base = "./";
 function createRouterHistory() {
   switch (histoireConfig.routerMode) {
@@ -16,12 +16,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView.vue.72c73e0b.js"), true ? ["./HomeView.vue.72c73e0b.js","./GenericMountStory.vue2.f47deb74.js","./vendor.95d36a40.js"] : void 0, import.meta.url)
+      component: () => __vitePreload(() => import("./HomeView.vue.9d332504.js"), true ? ["./HomeView.vue.9d332504.js","./GenericMountStory.vue2.f60a7434.js","./vendor.9201be76.js"] : void 0, import.meta.url)
     },
     {
       path: "/story/:storyId",
       name: "story",
-      component: () => __vitePreload(() => import("./StoryView.vue.8eba5574.js"), true ? ["./StoryView.vue.8eba5574.js","./vendor.95d36a40.js","./MobileOverlay.vue2.ea2742ed.js","./BaseEmpty.vue.d089c6c7.js","./state.79b01160.js","./GenericMountStory.vue2.f47deb74.js","./events.621625dc.js"] : void 0, import.meta.url)
+      component: () => __vitePreload(() => import("./StoryView.vue.4ba217e9.js"), true ? ["./StoryView.vue.4ba217e9.js","./vendor.9201be76.js","./MobileOverlay.vue2.48259acd.js","./BaseEmpty.vue.d78338b0.js","./state.69bd96a5.js","./GenericMountStory.vue2.f60a7434.js","./events.3173ac0f.js"] : void 0, import.meta.url)
     }
   ]
 });

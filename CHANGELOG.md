@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.1.2
+
+
+### 💅 Refactors
+
+  - IsClient logic and handle PointerEvent constructor (45b5821)
+
+### ✅ Tests
+
+  - Handle setPointerCapture for unit tests (2223837)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.1.1
 
 

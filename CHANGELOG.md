@@ -1,6 +1,17 @@
 # Changelog
 
 
+## vv0.1.0
+
+
+### 📖 Documentation
+
+  - Add demo link (46f99fe)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.0.9
 
 

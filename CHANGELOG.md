@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v0.0.8
+
+
+### 🤖 CI
+
+  - Use hash router for histoire (a7554c0)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.0.7
 
 

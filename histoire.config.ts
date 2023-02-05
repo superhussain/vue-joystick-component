@@ -4,7 +4,8 @@ import { HstVue } from '@histoire/plugin-vue'
 export default defineConfig({
   plugins: [HstVue()],
   setupFile: 'histoire.setup.ts',
+  routerMode: 'hash',
   vite: {
-    base: '/vue-joystick-component/',
+    base: '',
   },
 })

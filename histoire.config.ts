@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [HstVue()],
   setupFile: 'histoire.setup.ts',
   vite: {
-    base: '',
+    base: '/vue-joystick-component/',
   },
 })

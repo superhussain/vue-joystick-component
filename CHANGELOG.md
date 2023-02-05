@@ -8,10 +8,6 @@
 
   - Add demo link (46f99fe)
 
-### 🏡 Chore
-
-  - **release:** Vv0.1.0 (2a59c0d)
-
 ### ❤️  Contributors
 
 - Hussain <hi@huss.dev>

@@ -1,4 +1,4 @@
-import { av as defineComponent, aw as reactive, ax as ref, ay as computed, az as watch, aA as onBeforeUnmount, aB as openBlock, aC as createElementBlock, aD as createBaseVNode, aE as normalizeClass, aF as normalizeStyle, aG as resolveComponent, aH as createBlock, aI as withCtx, aJ as logEvent, aK as createVNode } from "./vendor.562d71c6.js";
+import { av as defineComponent, aw as reactive, ax as ref, ay as computed, az as watch, aA as onBeforeUnmount, aB as openBlock, aC as createElementBlock, aD as createBaseVNode, aE as normalizeClass, aF as normalizeStyle, aG as resolveComponent, aH as createBlock, aI as withCtx, aJ as logEvent, aK as createVNode } from "./vendor.aefccb01.js";
 var JoystickComponent;
 ((JoystickComponent2) => {
   ((Shape2) => {

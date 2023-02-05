@@ -11139,8 +11139,8 @@ const plugin = {
   options: config$1
 };
 const scriptRel = "modulepreload";
-const assetsURL = function(dep) {
-  return "/" + dep;
+const assetsURL = function(dep, importerUrl) {
+  return new URL(dep, importerUrl).href;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -11149,7 +11149,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   }
   const links = document.getElementsByTagName("link");
   return Promise.all(deps.map((dep) => {
-    dep = assetsURL(dep);
+    dep = assetsURL(dep, importerUrl);
     if (dep in seen)
       return;
     seen[dep] = true;
@@ -23047,7 +23047,7 @@ async function logEvent(name, argument) {
       event
     });
   } else {
-    const { useEventsStore } = await __vitePreload(() => import("./events.bed95abf.js"), true ? ["assets/events.bed95abf.js","assets/story.e64597ae.js","assets/GenericMountStory.vue2.14ab40bc.js"] : void 0);
+    const { useEventsStore } = await __vitePreload(() => import("./events.a053b093.js"), true ? ["./events.a053b093.js","./story.06b3c244.js","./GenericMountStory.vue2.cb371f51.js"] : void 0, import.meta.url);
     useEventsStore().addEvent(event);
   }
 }

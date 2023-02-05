@@ -18,6 +18,7 @@
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-namespace": "off",
     "unicorn/filename-case": ["error", { "cases": { "kebabCase": true, "pascalCase": true } }],
     "unicorn/no-null": "off",

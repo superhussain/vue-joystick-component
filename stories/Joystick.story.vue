@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { logEvent } from 'histoire/client'
-import Joystick from '.'
+import Joystick from '../dist/index'
 </script>
 
 <template>

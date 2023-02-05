@@ -8,3 +8,4 @@ types
 .gen
 .nyc_output
 .eslintcache
+coverage

@@ -207,7 +207,9 @@ const _pointerDown = (e: PointerEvent) => {
     _pointerMove(event),
   )
   _pointerId.value = e.pointerId
-  stickRef.value.setPointerCapture(e.pointerId)
+  if (typeof stickRef.value.setPointerCapture === 'function') {
+    stickRef.value.setPointerCapture(e.pointerId)
+  }
   emit('start', { type: 'start' })
 }
 
@@ -348,15 +350,15 @@ onBeforeUnmount(() => _followStop())
 <template>
   <div
     ref="baseRef"
-    class="app-joystick"
-    :class="{ 'app-joystick--disabled': props.disabled }"
+    class="joystick"
+    :class="{ 'joystick--disabled': props.disabled }"
     :style="baseStyle"
   >
     <button
       ref="stickRef"
       :disabled="props.disabled"
-      class="app-joystick__stick"
-      :class="{ 'app-joystick__stick--disabled': props.disabled }"
+      class="joystick__stick"
+      :class="{ 'joystick__stick--disabled': props.disabled }"
       :style="stickStyle"
       @pointerdown="_pointerDown"
     />

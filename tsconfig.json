@@ -11,5 +11,5 @@
     "strictNullChecks": true,
     "jsx": "preserve"
   },
-  "include": ["env.d.ts", "src", "test"]
+  "include": ["env.d.ts", "src", "test", "stories"]
 }

@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.1.1
+
+
+### 🩹 Fixes
+
+  - Support SSR (7849f72)
+
+### 📖 Documentation
+
+  - Update bad changelog (139fcd2)
+
+### ❤️  Contributors
+
+- Hussain <hi@huss.dev>
+
 ## v0.1.0
 
 

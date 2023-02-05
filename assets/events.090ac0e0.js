@@ -1,6 +1,6 @@
-import { i as defineStore, E as reactive, r as ref, k as watch } from "./vendor.aefccb01.js";
-import { u as useStoryStore } from "./story.06b3c244.js";
-import "./GenericMountStory.vue2.cb371f51.js";
+import { i as defineStore, E as reactive, r as ref, k as watch } from "./vendor.24c0da54.js";
+import { u as useStoryStore } from "./story.05534ac1.js";
+import "./GenericMountStory.vue2.98dfb3f2.js";
 const useEventsStore = defineStore("events", () => {
   const storyStore = useStoryStore();
   const events = reactive([]);

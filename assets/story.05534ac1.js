@@ -1,6 +1,6 @@
-import { N as createRouter, _ as __vitePreload, O as createWebHistory, P as createWebHashHistory, i as defineStore, r as ref, c as computed } from "./vendor.aefccb01.js";
-import { h as histoireConfig } from "./GenericMountStory.vue2.cb371f51.js";
-const base = "./";
+import { N as createRouter, _ as __vitePreload, O as createWebHistory, P as createWebHashHistory, i as defineStore, r as ref, c as computed } from "./vendor.24c0da54.js";
+import { h as histoireConfig } from "./GenericMountStory.vue2.98dfb3f2.js";
+const base = "/vue-joystick-component/";
 function createRouterHistory() {
   switch (histoireConfig.routerMode) {
     case "hash":
@@ -16,12 +16,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView.vue.80fc8266.js"), true ? ["./HomeView.vue.80fc8266.js","./GenericMountStory.vue2.cb371f51.js","./vendor.aefccb01.js"] : void 0, import.meta.url)
+      component: () => __vitePreload(() => import("./HomeView.vue.c6180699.js"), true ? ["assets/HomeView.vue.c6180699.js","assets/GenericMountStory.vue2.98dfb3f2.js","assets/vendor.24c0da54.js"] : void 0)
     },
     {
       path: "/story/:storyId",
       name: "story",
-      component: () => __vitePreload(() => import("./StoryView.vue.512b0f8a.js"), true ? ["./StoryView.vue.512b0f8a.js","./vendor.aefccb01.js","./MobileOverlay.vue2.f5c05dcb.js","./BaseEmpty.vue.b8f0f2b5.js","./state.7d17e4a1.js","./GenericMountStory.vue2.cb371f51.js","./events.a053b093.js"] : void 0, import.meta.url)
+      component: () => __vitePreload(() => import("./StoryView.vue.1292e54b.js"), true ? ["assets/StoryView.vue.1292e54b.js","assets/vendor.24c0da54.js","assets/MobileOverlay.vue2.7e0b586f.js","assets/BaseEmpty.vue.63467fd4.js","assets/state.e5994066.js","assets/GenericMountStory.vue2.98dfb3f2.js","assets/events.090ac0e0.js"] : void 0)
     }
   ]
 });

@@ -11139,8 +11139,8 @@ const plugin = {
   options: config$1
 };
 const scriptRel = "modulepreload";
-const assetsURL = function(dep) {
-  return "/vue-joystick-component/" + dep;
+const assetsURL = function(dep, importerUrl) {
+  return new URL(dep, importerUrl).href;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -11149,7 +11149,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   }
   const links = document.getElementsByTagName("link");
   return Promise.all(deps.map((dep) => {
-    dep = assetsURL(dep);
+    dep = assetsURL(dep, importerUrl);
     if (dep in seen)
       return;
     seen[dep] = true;
@@ -23047,7 +23047,7 @@ async function logEvent(name, argument) {
       event
     });
   } else {
-    const { useEventsStore } = await __vitePreload(() => import("./events.090ac0e0.js"), true ? ["assets/events.090ac0e0.js","assets/story.05534ac1.js","assets/GenericMountStory.vue2.98dfb3f2.js"] : void 0);
+    const { useEventsStore } = await __vitePreload(() => import("./events.756b5b77.js"), true ? ["./events.756b5b77.js","./story.6f440d3e.js","./GenericMountStory.vue2.97dbbb6d.js"] : void 0, import.meta.url);
     useEventsStore().addEvent(event);
   }
 }

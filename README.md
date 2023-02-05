@@ -2,9 +2,11 @@
 
 ![npm](https://img.shields.io/npm/v/vue-joystick-component)
 
-A Joystick Vue 3 Component
+A Joystick Vue 3 Component.
 
 _Inspired by [react-joystick-component](https://github.com/elmarti/react-joystick-component)_
+
+[**Joystick Demo**](https://superhussain.github.io/vue-joystick-component/#/story/stories-joystick-story-vue?variantId=_default)
 
 ## Installation
 

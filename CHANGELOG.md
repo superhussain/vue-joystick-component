@@ -1,12 +1,16 @@
 # Changelog
 
 
-## vv0.1.0
+## v0.1.0
 
 
 ### 📖 Documentation
 
   - Add demo link (46f99fe)
+
+### 🏡 Chore
+
+  - **release:** Vv0.1.0 (2a59c0d)
 
 ### ❤️  Contributors
 

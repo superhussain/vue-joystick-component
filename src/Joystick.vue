@@ -19,7 +19,7 @@ export interface JoystickComponentProps {
   /**
    * Determines whether the joystick sticks to the positions it is moved to.
    *
-   * - `false` will bring the joystick back to its original position
+   * - `false` will bring the joystick back to its original position when released
    * - `true` will keep the joystick in its place when moved
    *
    * (default: `false`)
